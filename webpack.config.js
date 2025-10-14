@@ -7,7 +7,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: '/',
+        publicPath: process.env.NODE_ENV === 'production' ? '/credit-card-validator/' : '/',
     },
     module: {
         rules: [
